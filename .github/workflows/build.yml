@@ -1,1 +1,39 @@
 
+name: Build Power BI Visual
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Power BI SDK
+        run: npm install -g powerbi-visuals-tools
+
+      - name: Build Visual
+        run: pbiviz package
+
+      - name: Upload PBIVIZ
+        uses: actions/upload-artifact@v4
+        with:
+          name: ParetoPro
+          path: dist/*.pbiviz
