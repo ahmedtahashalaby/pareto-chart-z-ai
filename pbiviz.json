@@ -1,0 +1,29 @@
+{
+  "visual": {
+    "name": "ParetoPro",
+    "displayName": "Pareto Pro",
+    "guid": "PARETOPRO1234567890ABCDEF123456789012",
+    "visualClassName": "Visual",
+    "version": "1.0.0.0",
+    "description": "A professional Pareto chart custom visual for Power BI with advanced features.",
+    "supportUrl": "https://example.com/support",
+    "gitHubUrl": "https://github.com/example/pareto-pro"
+  },
+  "apiVersion": "5.7.0",
+  "author": {
+    "name": "Pareto Pro Developer",
+    "email": "developer@example.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": {
+    "cran": false,
+    "npm": {
+      "d3": "^7.8.5"
+    }
+  },
+  "stringResources": []
+}
